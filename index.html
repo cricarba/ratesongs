@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+        
+  
+<script>
+  // Initialize Firebase
+  function close_window() {
+  if (confirm("Close Window?")) {
+    close();
+  }
+}
+  var config = {
+    apiKey: "AIzaSyCipRVthUfEUGknpdDW0Wa2IehE8n3_Pmg",
+    authDomain: "songsrhcp.firebaseapp.com",
+    databaseURL: "https://songsrhcp.firebaseio.com",
+    projectId: "songsrhcp",
+    storageBucket: "songsrhcp.appspot.com",
+    messagingSenderId: "237068994061"
+  };
+  firebase.initializeApp(config);
+
+ 
+</script>
+</head>
+<body>
+        <a href="javascript:close_window();">close</a>
+    <div id="app">    
+            {{seleccion30}}
+         <ul v-for="(cancion, key) in canciones">
+                <li>{{cancion.Nombre}} - {{cancion.Duracion}}-  <a v-on:click="ObtenerAlbum(cancion.album)"> {{cancion.Album}}</a> 
+                        <button v-on:click="CalificarCancion(cancion)"> Seleccionar</button></li>
+         </ul>
+
+         <ul v-for="(cancion, key) in top3O">
+                        <li><a v-on:click="ActualizarCancion(cancion.Album)"> {{cancion.Album}} actaulizar album</a><br>{{cancion}}   <button v-on:click="CrearCancion(cancion, key + 1)"> key +1</button>
+                            <button v-on:click="CrearCancion(cancion, key + 1)"> key +1</button><button v-on:click="CrearCancion(cancion, key + 1)"> key +1</button><button v-on:click="CrearCancion(cancion, key + 1)"> key +1</button><button v-on:click="CrearCancion(cancion, key + 1)"> key +1</button></li>
+        </ul>
+        <button v-on:click="Next()"> Siguiente</button></li>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

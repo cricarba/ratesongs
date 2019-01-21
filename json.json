@@ -1,0 +1,27 @@
+{
+    "Artistas" : [
+                { 
+                    "Nombre" : "Red hot chilli peppers"                    
+                }               
+            ],
+    "Albumes":[
+        {
+            "Nombre" : "Blood Sugar Sex Magik"
+        },
+        {
+           "Nombre" : "By the Way" 
+        }
+    ],
+    "Canciones":[
+        {
+            "Nombre" : "Blood Sugar Sex Magik",
+            "Duracion": "5:00",
+             "Video" :""
+        },
+        {
+           "Nombre" : "Don't Forget Me" ,
+            "Duracion": "5:00",
+            "Video" :""
+        }
+    ]
+}
